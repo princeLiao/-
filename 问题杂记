@@ -3,3 +3,4 @@ JSON.parse与eval和能将一个字符串解析成一个JSON对象，但还是�
 $.parseJSON是jq的语法，JSON.parse是js的语法（兼容Ie8+）。
 JSON.parse方法只能解析属性名是双引号包裹的字符串对象，并会忽略换行和空格（值外面）。
 eval函数可将一个JavaScript代码字符串求值成特定的对象，所以解析成JSON对象只不过是作用之一。
+参考链接 http://www.cnblogs.com/lovesong/p/6036650.html
