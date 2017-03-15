@@ -1,24 +1,40 @@
 !function(a) {
-    function b() {
-        a.rem = f.getBoundingClientRect().width / 16, f.style.fontSize = a.rem + "px";
-        var j = parseFloat(a.getComputedStyle(f,null).fontSize);
-        if(a.rem != j){
-            a.rem = a.rem * a.rem / j;
-            f.style.fontSize = a.rem + "px"
-        }
-    }
-    var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
-        e = 1,
-        f = document.documentElement,
-        g = document.createElement("meta");
-    if (a.dpr = d, a.addEventListener("resize", function() {
-            clearTimeout(c), c = setTimeout(b, 300)
-        }, !1), a.addEventListener("pageshow", function(a) {
-            a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
-        }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
-    else {
-        var h = document.createElement("div");
-        h.appendChild(g), document.write(h.innerHTML)
-    }
-    b()
-}(window);
+            function b() {
+                a.rem = Math.min(f.getBoundingClientRect().width,540) * 50/320, f.style.fontSize = a.rem + "px";
+                var j = parseFloat(a.getComputedStyle(f,null).fontSize);
+                if(a.rem != j){
+                    a.rem = a.rem * a.rem / j;
+                    f.style.fontSize = a.rem + "px"
+                }
+            }
+            var c, d = a.navigator.appVersion.match(/iphone/gi) ? a.devicePixelRatio : 1,
+                e = 1,
+                f = document.documentElement,
+                g = document.createElement("meta");
+            if (a.dpr = d, a.addEventListener("resize", function() {
+                    clearTimeout(c), c = setTimeout(b, 300)
+                }, !1), a.addEventListener("pageshow", function(a) {
+                    a.persisted && (clearTimeout(c), c = setTimeout(b, 300))
+                }, !1), f.setAttribute("data-dpr", d), g.setAttribute("name", "viewport"), g.setAttribute("content", "initial-scale=" + e + ", maximum-scale=" + e + ", minimum-scale=" + e + ", user-scalable=no"), f.firstElementChild) f.firstElementChild.appendChild(g);
+            else {
+                var h = document.createElement("div");
+                h.appendChild(g), document.write(h.innerHTML)
+            }
+            b()
+        }(window);
+        
+ html {
+    font-size: 50px;
+}
+@media (min-width: 320px) {
+    html {
+        font-size: 50px; } }
+@media (min-width: 360px) {
+    html {
+        font-size: 56.25px; } }
+@media (min-width: 375px) {
+    html {
+        font-size: 58.59375px; } }
+@media (min-width: 414px) {
+    html {
+        font-size: 64.6875px; } }
