@@ -1,0 +1,4 @@
+git log 显示提交记录 
+复制需要回滚的commit_id
+ git reset --hard <commit_id>
+  git push origin HEAD --force
